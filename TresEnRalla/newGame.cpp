@@ -29,6 +29,8 @@ void NewGame(MainManager* mm) {
 	if (input == '1') {
 		int inputX;
 		int inputY;
+		int Y;
+		int X;
 		bool isOK;
 		do {
 			cout << "Diu la curdanada a X: ";
@@ -42,26 +44,42 @@ void NewGame(MainManager* mm) {
 
 
 		} while (!isOK);
-
 		mm->map[inputY - 1][inputX - 1] = 'X';
 
-		system("cls");
-		MostrarMapa(mm);
-		
-		cout << "Turn del contricant" << endl;
-
-		int X = rand() % mm->size;
-		int Y = rand() % mm->size;
-
-		isOK = mm->map[Y][X] == ' ';
-
-		while (!isOK){
-			int X = rand() % mm->size;
-			int Y = rand() % mm->size;
-			isOK = mm->map[Y][X] == ' ';
+		if (mm->turnos >= 4) {
+			system("cls");
+			MostrarMapa(mm);
+			cout << "Natellant al taule" << endl;
+			mm->turnos = 0;
+			for (int i = 0; i < mm->size; i++) {
+				for (int j = 0; j < mm->size; j++) {
+				mm->map[i][j] = ' ';
+				}
+			}
 		}
+		else {
+			system("cls");
+			MostrarMapa(mm);
 
-		mm->map[Y][X] == 'O';
+			cout << "Turn del contricant" << endl;
+			do {
+				X = rand() % mm->size;
+				Y = rand() % mm->size;
+
+				isOK = mm->map[Y][X] == ' ';
+
+			} while (!isOK);
+
+			mm->map[Y][X] = 'O';
+			mm->turnos++;
+
+
+			for (int i = 0; i < mm->size; i++) {
+				for (int j = 0; j < mm->size; j++) {
+
+				}
+			}
+		}
 	}
 	else if (input == '2') {
 		mm->currentScen = SAVE;

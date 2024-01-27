@@ -2,6 +2,8 @@
 #include "newGame.h"
 
 int main() {
+	srand(time(NULL));
+
 	MainManager* mm = new MainManager;
 	mm->Inicialaiz();
 	do {

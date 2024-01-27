@@ -18,5 +18,7 @@ struct MainManager {
 
 	char map[3][3];
 
+	int turnos;
+
 	void Inicialaiz();
 };
