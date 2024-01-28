@@ -20,7 +20,6 @@ void NewGame(MainManager* mm) {
 	inputOk = input == '1' || input == '2' || input == '3';
 
 	while (!inputOk) {
-		//Verificacion de input
 		cout << "Tria una opcio valida: ";
 		cin >> input;
 		cout << endl;
@@ -35,7 +34,6 @@ void NewGame(MainManager* mm) {
 		int X;
 		bool isOK;
 		do {
-			//Eleccion de posicion
 			cout << "Diu la curdanada a X: ";
 			cin >> inputX;
 
@@ -49,8 +47,7 @@ void NewGame(MainManager* mm) {
 		} while (!isOK);
 		mm->map[inputY - 1][inputX - 1] = 'X';
 
-		if (VerificarVictoria(mm, 'X')) {
-			//Verificar Victoria
+		if (verificarVictoria(mm, 'X')) {
 			system("cls");
 			MostrarMapa(mm);
 
@@ -94,7 +91,7 @@ void NewGame(MainManager* mm) {
 			mm->map[Y][X] = 'O';
 			mm->turnos++;
 
-			if (VerificarVictoria(mm, 'O')) {
+			if (verificarVictoria(mm, 'O')) {
 				system("cls");
 				MostrarMapa(mm);
 

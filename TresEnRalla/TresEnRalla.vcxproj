@@ -132,12 +132,14 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="mostrarMapa.cpp" />
     <ClCompile Include="newGame.cpp" />
+    <ClCompile Include="Victoria.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainManager.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="mostrarMapa.h" />
     <ClInclude Include="newGame.h" />
+    <ClInclude Include="Victoria.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
