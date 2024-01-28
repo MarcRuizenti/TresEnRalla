@@ -1,5 +1,7 @@
 #pragma once
-
+#include <fstream> 
+#include <sstream> 
+#include <string> 
 #include<iostream>
 #include<cstdlib>
 #include<time.h>

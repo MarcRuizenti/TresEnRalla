@@ -1,5 +1,6 @@
 #include"menu.h"
 #include "newGame.h"
+#include "Save.h"
 
 int main() {
 	srand(time(NULL));
@@ -13,13 +14,13 @@ int main() {
 			Menu(mm);
 			break;
 		case NEWGAME:
-			NewGame(mm);
+			Game(mm);
 			break;
 		case LOADGAME:
 
 			break;
 		case SAVE:
-
+			Save(mm);
 			break;
 		default:
 			break;

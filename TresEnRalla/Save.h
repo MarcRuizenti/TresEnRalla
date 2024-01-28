@@ -1,5 +1,4 @@
 #pragma once
 #include "MainManager.h"
 
-
-void Game(MainManager* mm);
+void Save(MainManager* mm);

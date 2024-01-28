@@ -2,7 +2,7 @@
 #include "mostrarMapa.h"
 #include "Victoria.h"
 
-void NewGame(MainManager* mm) {
+void Game(MainManager* mm) {
 	system("cls");
 	MostrarMapa(mm);
 

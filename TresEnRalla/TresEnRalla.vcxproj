@@ -132,6 +132,7 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="mostrarMapa.cpp" />
     <ClCompile Include="newGame.cpp" />
+    <ClCompile Include="Save.cpp" />
     <ClCompile Include="Victoria.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="mostrarMapa.h" />
     <ClInclude Include="newGame.h" />
+    <ClInclude Include="Save.h" />
     <ClInclude Include="Victoria.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
