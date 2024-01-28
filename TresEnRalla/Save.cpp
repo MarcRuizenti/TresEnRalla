@@ -9,16 +9,37 @@ void Save(MainManager* mm) {
 	cout << "Introdueix al nom que vulguis que tingi l'arxiu: ";
 	cin >> nameArchivo;
 
-	std::ofstream outputFile;
+	ofstream outputFile;
+	ifstream exite(nameArchivo);
 
-	outputFile.open(nameArchivo, std::ios::trunc);
+	if (exite.good()) {
+		string sn;
+		bool isOk;
+		cout << "Vols sobreescruira la partida?(s/n): ";
+		cin >> sn;
+
+		isOk = sn == "s" || sn == "n";
+
+		while (!isOk){
+
+		}
+	}
+
+	outputFile.open(nameArchivo, ios::trunc);
 
 	if (!outputFile.is_open()) {
-		std::cout << "No sa pogut obra" << endl;
+		cout << "No sa pogut obra" << endl;
 		return;
 	}
 
-	outputFile << mm->map << ' ' << mm->turnos;
+	for (int i = 0; i < mm->size; i++) {
+		for (int j = 0; j < mm->size; j++) {
+			outputFile << mm->map[i][j] << " ";
+		}
+	}
+	
+	outputFile << mm->turnos;
 
 	outputFile.close();
+	mm->currentScen = MENU;
 }

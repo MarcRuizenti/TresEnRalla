@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LoadGame.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainManager.cpp" />
     <ClCompile Include="menu.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="Victoria.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LoadGame.h" />
     <ClInclude Include="MainManager.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="mostrarMapa.h" />

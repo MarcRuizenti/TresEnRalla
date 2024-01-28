@@ -16,7 +16,7 @@ struct MainManager {
 	Scens currentScen;
 	bool exit;
 
-	const int size = 3;
+	int size = 3;
 
 	char map[3][3];
 

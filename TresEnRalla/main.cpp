@@ -1,6 +1,7 @@
 #include"menu.h"
 #include "newGame.h"
 #include "Save.h"
+#include "LoadGame.h"
 
 int main() {
 	srand(time(NULL));
@@ -17,7 +18,7 @@ int main() {
 			Game(mm);
 			break;
 		case LOADGAME:
-
+			LoadGame(mm);
 			break;
 		case SAVE:
 			Save(mm);
