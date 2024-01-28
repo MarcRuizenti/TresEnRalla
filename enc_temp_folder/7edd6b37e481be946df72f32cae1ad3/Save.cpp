@@ -17,14 +17,12 @@ void Save(MainManager* mm) {
 		bool isOk;
 		cout << "Vols sobreescruira la partida?(s/n): ";
 		cin >> sn;
-		cout << endl;
 
 		isOk = sn == "s" || sn == "n";
 
 		while (!isOk){
 			cout << "Vols sobreescruira la partida?(s/n): ";
 			cin >> sn;
-			cout << endl;
 
 			isOk = sn == "s" || sn == "n";
 		}
