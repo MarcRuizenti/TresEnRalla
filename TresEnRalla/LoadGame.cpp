@@ -15,6 +15,7 @@ void LoadGame(MainManager* mm) {
 
 	if (!inputFile.is_open()) {
 		cout << "No sa pogut obra" << endl;
+		system("pause");
 		return;
 	}
 
@@ -22,13 +23,17 @@ void LoadGame(MainManager* mm) {
 		for (int j = 0; j < mm->size; j++) {
 			if (!inputFile.get(mm->map[i][j])) {
 				cout << "Error al llegui" << endl;
+
+				system("pause");
 				return;
 			}
 		}
 	}
 	
 	if (!(inputFile >> mm->turnos)) {
-		cout << "Error al llegui" << endl;
+		cout << "Error al llegui turnos" << endl;
+
+		system("pause");
 		return;
 	}
 

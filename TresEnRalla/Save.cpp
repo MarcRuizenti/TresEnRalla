@@ -46,7 +46,13 @@ void Save(MainManager* mm) {
 			outputFile << mm->map[i][j] << " ";
 		}
 	}
-	
+
+	for (int i = 0; i < mm->size; i++) {
+		for (int j = 0; j < mm->size; j++) {
+			mm->map[i][j] = ' ';
+		}
+	}
+
 	outputFile << mm->turnos;
 
 	outputFile.close();

@@ -117,6 +117,11 @@ void Game(MainManager* mm) {
 	}
 	else if (input == '3') {
 		mm->currentScen = MENU;
+		for (int i = 0; i < mm->size; i++) {
+			for (int j = 0; j < mm->size; j++) {
+				mm->map[i][j] = ' ';
+			}
+		}
 	}
 	
 	system("pause");
