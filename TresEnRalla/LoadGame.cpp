@@ -30,7 +30,7 @@ void LoadGame(MainManager* mm) {
 		}
 	}
 	
-	if (!(inputFile >> mm->turnos)) {
+	if (!inputFile >> mm->turnos) {
 		cout << "Error al llegui turnos" << endl;
 
 		system("pause");
