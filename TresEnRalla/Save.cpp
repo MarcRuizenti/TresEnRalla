@@ -43,7 +43,7 @@ void Save(MainManager* mm) {
 
 	for (int i = 0; i < mm->size; i++) {
 		for (int j = 0; j < mm->size; j++) {
-			outputFile << mm->map[i][j] << " ";
+			outputFile << mm->map[i][j];
 		}
 	}
 
